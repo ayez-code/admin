@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="dashboardRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.UsersPanelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.UsersPanelController">
    <center>
       <AnchorPane fx:id="usersContent" prefHeight="628.0" prefWidth="640.0" BorderPane.alignment="CENTER">
          <children>
@@ -25,19 +25,19 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </TextField>
-            <TableView fx:id="usersInfoTable" editable="true" layoutX="38.0" layoutY="162.0" prefHeight="365.0" prefWidth="1159.0" style="-fx-background-color: #9fa5c8;" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="162.0">
+            <TableView fx:id="usersInfoTable" editable="true" layoutX="38.0" layoutY="162.0" prefHeight="418.0" prefWidth="1120.0" style="-fx-background-color: #9fa5c8;" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="162.0">
               <columns>
-                <TableColumn prefWidth="105.0" text="Student ID" />
-                <TableColumn minWidth="3.0" prefWidth="307.0" text="Name" />
-                  <TableColumn prefWidth="146.0" text="Time" />
+                <TableColumn prefWidth="211.0" text="Student ID" />
+                <TableColumn minWidth="3.0" prefWidth="660.0" text="Name" />
+                  <TableColumn prefWidth="248.0" text="Time" />
               </columns>
             </TableView>
-            <Button fx:id="insertInfoButton" layoutX="917.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#handleInsertUser" prefHeight="50.0" prefWidth="118.0" text="Insert">
+            <Button fx:id="insertInfoButton" layoutX="911.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#handleInsertUser" prefHeight="50.0" prefWidth="118.0" text="Insert">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button fx:id="removeInfoButton" layoutX="1078.0" layoutY="57.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" text="Remove">
+            <Button fx:id="removeInfoButton" layoutX="1077.0" layoutY="57.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" text="Remove">
                <font>
                   <Font size="19.0" />
                </font>
