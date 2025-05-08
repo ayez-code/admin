@@ -8,46 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="1480.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminPanelController">
-   <left>
-      <VBox prefHeight="628.0" prefWidth="209.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="dashboardButton" mnemonicParsing="false" onMouseClicked="#handleDashboardClick" prefHeight="71.0" prefWidth="216.0" style="-fx-background-color: #323b60;" text="DASHBOARD" textFill="WHITE">
-               <font>
-                  <Font name="Britannic Bold" size="20.0" />
-               </font>
-            </Button>
-            <Line endX="108.29289245605469" startX="-100.0" stroke="#5271ff" strokeWidth="2.0" />
-            <Button fx:id="usersButton" mnemonicParsing="false" onMouseClicked="#handleUsersClick" prefHeight="72.0" prefWidth="214.0" style="-fx-background-color: #323b60;" text="USERS ACTIVITY" textFill="WHITE">
-               <font>
-                  <Font name="Britannic Bold" size="20.0" />
-               </font>
-            </Button>
-            <Line endX="108.29289245605469" layoutX="112.0" layoutY="80.0" startX="-100.0" stroke="#5271ff" strokeWidth="2.0" />
-            <Button fx:id="roomButton" mnemonicParsing="false" onMouseClicked="#handleRoomClick" prefHeight="70.0" prefWidth="214.0" style="-fx-background-color: #323b60;" text="ROOM RESERVATION" textFill="#fcfcfc">
-               <font>
-                  <Font name="Britannic Bold" size="20.0" />
-               </font>
-            </Button>
-            <Line endX="108.29289245605469" layoutX="112.0" layoutY="151.0" startX="-100.0" stroke="#5271ff" strokeWidth="2.0" />
-            <Button fx:id="settingsButton" mnemonicParsing="false" onMouseClicked="#handleSettingsClick" prefHeight="75.0" prefWidth="212.0" style="-fx-background-color: #323b60;" text="SETTINGS" textFill="WHITE">
-               <font>
-                  <Font name="Britannic Bold" size="20.0" />
-               </font>
-            </Button>
-            <Line endX="108.29289245605469" layoutX="112.0" layoutY="219.0" startX="-100.0" stroke="#5271ff" strokeWidth="2.0" />
-            <Region prefHeight="298.0" prefWidth="209.0" style="-fx-background-color: #9fa5c8;" />
-         </children>
-      </VBox>
-   </left>
+<BorderPane fx:id="dashboardRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.UsersPanelController">
    <center>
-      <AnchorPane fx:id="dashboardContent" prefHeight="628.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="usersContent" prefHeight="628.0" prefWidth="640.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="579.0" prefWidth="669.0" style="-fx-background-color: #51578d;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Region layoutX="38.0" prefHeight="579.0" prefWidth="1159.0" style="-fx-background-color: #51578d;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label layoutX="38.0" layoutY="14.0" prefHeight="43.0" prefWidth="170.0" text="USERS" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="25.0" />
@@ -58,19 +25,19 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </TextField>
-            <TableView editable="true" layoutX="38.0" layoutY="162.0" prefHeight="365.0" prefWidth="1159.0" style="-fx-background-color: #9fa5c8;" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="162.0">
+            <TableView fx:id="usersInfoTable" editable="true" layoutX="38.0" layoutY="162.0" prefHeight="365.0" prefWidth="1159.0" style="-fx-background-color: #9fa5c8;" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="162.0">
               <columns>
                 <TableColumn prefWidth="105.0" text="Student ID" />
                 <TableColumn minWidth="3.0" prefWidth="307.0" text="Name" />
                   <TableColumn prefWidth="146.0" text="Time" />
               </columns>
             </TableView>
-            <Button layoutX="917.0" layoutY="57.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="118.0" text="Insert">
+            <Button fx:id="insertInfoButton" layoutX="917.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#handleInsertUser" prefHeight="50.0" prefWidth="118.0" text="Insert">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button layoutX="1078.0" layoutY="57.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" text="Remove">
+            <Button fx:id="removeInfoButton" layoutX="1078.0" layoutY="57.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" text="Remove">
                <font>
                   <Font size="19.0" />
                </font>
@@ -78,17 +45,4 @@
          </children>
       </AnchorPane>
    </center>
-   <top>
-      <AnchorPane prefHeight="52.0" prefWidth="880.0" BorderPane.alignment="CENTER">
-         <children>
-            <Region prefHeight="52.0" prefWidth="880.0" style="-fx-background-color: #f7f8fa;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label layoutX="14.0" layoutY="11.0" prefHeight="30.0" prefWidth="272.0" text="Collab Room Admin Panel" textFill="#51578d">
-               <font>
-                  <Font name="Bodoni MT Bold" size="24.0" />
-               </font>
-            </Label>
-            <Line endX="1167.0" layoutX="313.0" layoutY="52.0" startX="-313.0" stroke="#ae7da9" strokeWidth="2.0" />
-         </children>
-      </AnchorPane>
-   </top>
 </BorderPane>
