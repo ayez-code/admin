@@ -1,26 +1,48 @@
-package admin;
+<?xml version="1.0" encoding="UTF-8"?>
 
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
 
-
-public class UsersPanelController {
-
-    @FXML
-    private TableView<?> usersInfoTable;
-
-    @FXML
-    private Button insertInfoButton;
-
-    @FXML
-    private Button removeInfoButton;
-
-    @FXML
-    private void handleInsertUser() {
-        System.out.println("Insert button clicked.");
-    }
-
-}
+<BorderPane fx:id="dashboardRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.UsersPanelController">
+   <center>
+      <AnchorPane fx:id="usersContent" prefHeight="628.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region layoutX="38.0" prefHeight="579.0" prefWidth="1159.0" style="-fx-background-color: #51578d;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label layoutX="38.0" layoutY="14.0" prefHeight="43.0" prefWidth="170.0" text="USERS" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField layoutX="38.0" layoutY="57.0" prefHeight="49.0" prefWidth="556.0" promptText="Search">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="usersInfoTable" editable="true" layoutX="38.0" layoutY="162.0" prefHeight="365.0" prefWidth="1159.0" style="-fx-background-color: #9fa5c8;" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="162.0">
+              <columns>
+                <TableColumn prefWidth="105.0" text="Student ID" />
+                <TableColumn minWidth="3.0" prefWidth="307.0" text="Name" />
+                  <TableColumn prefWidth="146.0" text="Time" />
+              </columns>
+            </TableView>
+            <Button fx:id="insertInfoButton" layoutX="917.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#handleInsertUser" prefHeight="50.0" prefWidth="118.0" text="Insert">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeInfoButton" layoutX="1078.0" layoutY="57.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" text="Remove">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
