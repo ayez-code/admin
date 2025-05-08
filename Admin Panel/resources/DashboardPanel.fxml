@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="dashboardRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminPanelController">
+   <center>
+      <AnchorPane fx:id="dashboardContent" prefHeight="628.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="579.0" prefWidth="669.0" style="-fx-background-color: #51578d;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label layoutX="83.0" layoutY="23.0" text="DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#9fa5c8" height="215.0" layoutX="83.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="323.0" />
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#9fa5c8" height="215.0" layoutX="459.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="323.0" />
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#9fa5c8" height="215.0" layoutX="836.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="323.0" />
+            <Text fill="WHITE" layoutX="103.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THIS WEEK'S RESERVATIONS">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="484.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESERVED ROOMS">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#9fa5c8" height="215.0" layoutX="836.0" layoutY="357.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="323.0" />
+            <Text fill="WHITE" layoutX="862.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVAILABLE ROOMS">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="862.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL RESERVATIONS">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="106.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="484.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="862.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="862.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Text>
+            <BarChart categoryGap="3.0" layoutX="83.0" layoutY="357.0" prefHeight="252.0" prefWidth="699.0" style="-fx-background-color: #9fa5c8;">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" startMargin="0.0" tickLabelFill="#e8d8ff" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis forceZeroInRange="false" minorTickVisible="false" side="LEFT" tickLabelFill="WHITE" tickLength="10.0" tickUnit="10.0" upperBound="4.0" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
